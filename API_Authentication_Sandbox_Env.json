@@ -17,6 +17,11 @@
 			"value": "",
 			"enabled": true
 		}
+		{
+			"key": "URL",
+			"value": "https://c2etdk32v5.execute-api.ap-southeast-2.amazonaws.com",
+			"enabled": true
+		}
 	],
 	"_postman_variable_scope": "environment",
 	"_postman_exported_at": "2021-10-19T02:54:27.810Z",
