@@ -1,3 +1,2 @@
-# Read Me
-A sample Local Repo to learn the nuances of GitHub
-Also the first commit to Main
+# API Test Cases for the Partner API testing.
+- API Testing Coverage as part of the Partner API project.
