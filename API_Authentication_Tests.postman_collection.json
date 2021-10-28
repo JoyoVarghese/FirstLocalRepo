@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "3b51b1d2-7328-4832-b95c-f927e672a34c",
+		"name": "API Authentication Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Access Token with Secret Key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "983e14d1-0d8e-40e7-9ab7-b7d1ee088aa4",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "https://afgonlinedev.onmicrosoft.com/baa85934-5231-44d2-b237-48afe9201796/.default",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "95p4HHK._1J0L-Y1b2zG_BTZTeU~in7SvL",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://c2etdk32v5.execute-api.ap-southeast-2.amazonaws.com/default/oauth/token",
+					"protocol": "https",
+					"host": [
+						"c2etdk32v5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token with Certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "25071032-6dac-4c80-a14a-a35c1bea8492",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "https://afgonlinedev.onmicrosoft.com/baa85934-5231-44d2-b237-48afe9201796/.default",
+							"type": "text"
+						},
+						{
+							"key": "client_assertion_type",
+							"value": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
+							"type": "text"
+						},
+						{
+							"key": "client_assertion",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6IlRnVXFDN2pncHVuM2NYRGlJbHRRcTdDNEY5VT0ifQ.eyJqdGkiOiIxNTcyODBlNS1kZGI5LTRmNTItOWNhMC0wZmJjNTNjOTExZDgiLCJpc3MiOiIyNTA3MTAzMi02ZGFjLTRjODAtYTE0YS1hMzVjMWJlYTg0OTIiLCJzdWIiOiIyNTA3MTAzMi02ZGFjLTRjODAtYTE0YS1hMzVjMWJlYTg0OTIiLCJhdWQiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vYWZnb25saW5lZGV2Lm9ubWljcm9zb2Z0LmNvbS92Mi4wIiwiaWF0IjoxNjM0MTAwMDIyLCJuYmYiOjE2MzQxMDAwMjIsImV4cCI6MTY2NTYzNjAyMn0.5wtHY9fVKj9knbekVnudFDMiv1sSxjpPWIrAvH1CUV5VfPdq-Jh3v5sky99o0M90rt2OijGGI4lcEhy8iEI7hK039mkc8CCoqQwZr3vmqlGsRdqsZVeclF-aCmgIkPg2fM8nBPTz3fwlNZ2UTUWZoLSGButohaP_hXTbZAR1a8bkebxuPraVitWDxYqAkRle6y47BfVFz9uiSL0XnowCd7SJTVQWaZxi4f39XDGS0VqWpJtPGJRQq1P1bzJQRSvC1Fd4zaw2vI39gaQzwpOn2XjraNuqZeMcgpwmiO91O1VuVSeabAuBv5ojiiRRRW4Lolv3ctkPqWhyxF8kt9ET7Q",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://c2etdk32v5.execute-api.ap-southeast-2.amazonaws.com/default/oauth/token",
+					"protocol": "https",
+					"host": [
+						"c2etdk32v5",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
